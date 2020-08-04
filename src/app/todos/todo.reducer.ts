@@ -3,11 +3,11 @@ import { crear, toggle, editar, borrar, toggleAll, limpiarCompletados } from "./
 import { Todo } from "./models/todo.model";
 
 export const estadoInicial: Todo[] = [
-    new Todo('Angular Course'),
-    new Todo('Angular Course new'),
-    new Todo('Angular Course new'),
-    new Todo('Angular Course new'),
-    new Todo('Angular Course new'),
+    new Todo('Curso de Angular'),
+    new Todo('Estudiar NgRx'),
+    new Todo('Hacer Ejercicio'),
+    new Todo('Estudiar Node'),
+    new Todo('Terminar Videojuego TLOU II'),
 ];
 
 const _todoReducer = createReducer(estadoInicial,
