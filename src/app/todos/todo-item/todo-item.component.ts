@@ -30,7 +30,6 @@ export class TodoItemComponent implements OnInit {
 
     this.chkCompletado.valueChanges.subscribe(val => {
       this.store.dispatch(actions.toggle({id:this.todo.id}))
-      console.log(val)
     });
 
   }

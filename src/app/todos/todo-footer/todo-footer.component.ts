@@ -22,7 +22,6 @@ export class TodoFooterComponent implements OnInit {
         this.store.subscribe(state => {
             this.filtroActual = state.filtro;
             this.pendientes = state.todos.filter(todo => !todo.completado).length;
-            console.log('pendiente ->', this.pendientes);
         })
     }
 
@@ -33,7 +32,9 @@ export class TodoFooterComponent implements OnInit {
     }
 
     limpiarCompletados(){
-        this.store.dispatch(actionsTodo.limpiarCompletados());
+        if (this.pendientes > 0) {
+            this.store.dispatch(actionsTodo.limpiarCompletados());
+        }
     }
 
 }
