@@ -15,6 +15,7 @@ export class TodoFooterComponent implements OnInit {
     filtroActual: actionsFiltro.filtrosValidos = 'todos';
     filtros: actionsFiltro.filtrosValidos[] = ['todos', 'completados', 'pendientes'];
     pendientes: number = 0;
+    // o
 
     constructor(private store: Store<AppState>) { }
 
